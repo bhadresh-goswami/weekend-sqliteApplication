@@ -7,15 +7,57 @@
 //
 
 import UIKit
+//step 1: copy database to installed document folder
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        //step a: get path from installed directory
+        let arrDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print(arrDir)
+        
+        //step b: document dir merge with database file name
+        dbManager.shared.dbPath = arrDir[0] + "/" + dbManager.shared.dbFileName
+        
+        print("\n\nDatabase file should be at \(dbManager.shared.dbPath)")
+        
+        //step c: check file is at location or not
+        if FileManager.default.fileExists(atPath: dbManager.shared.dbPath)
+        {
+            //file is at location
+            print("File already Exist at \(dbManager.shared.dbPath)!")
+        }
+        else
+        {
+            //step d: need to copy file from Bundles to Document directory
+            let filePathBundle = Bundle.main.path(forResource: "dbInfo", ofType: "db")
+            
+            if filePathBundle == nil{
+                //step e: file not find in bundles
+                print("file not find in bundles!")
+            }
+            else
+            {
+                //step f: copy file from bundle to document directory
+                do
+                {
+                    try FileManager.default.copyItem(atPath: filePathBundle!, toPath: dbManager.shared.dbPath)
+                    print("File Copied!")
+                }
+                catch let err as NSError{
+                    print("Error in copy file: \(err.localizedDescription)")
+                }
+            }
+            
+            
+        }
+        
         return true
     }
 

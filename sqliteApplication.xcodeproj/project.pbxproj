@@ -12,6 +12,8 @@
 		4F76040421C62C8D00A9DCFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F76040221C62C8D00A9DCFA /* Main.storyboard */; };
 		4F76040621C62C8D00A9DCFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F76040521C62C8D00A9DCFA /* Assets.xcassets */; };
 		4F76040921C62C8D00A9DCFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F76040721C62C8D00A9DCFA /* LaunchScreen.storyboard */; };
+		4F76041521C6302000A9DCFA /* dbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76041421C6302000A9DCFA /* dbManager.swift */; };
+		4F76041621C6340000A9DCFA /* dbInfo.db in Resources */ = {isa = PBXBuildFile; fileRef = 4F76041221C62E5B00A9DCFA /* dbInfo.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4F76040521C62C8D00A9DCFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F76040821C62C8D00A9DCFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F76040A21C62C8D00A9DCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F76041221C62E5B00A9DCFA /* dbInfo.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = dbInfo.db; sourceTree = "<group>"; };
+		4F76041421C6302000A9DCFA /* dbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		4F7603FD21C62C8D00A9DCFA /* sqliteApplication */ = {
 			isa = PBXGroup;
 			children = (
+				4F76041321C6300200A9DCFA /* Models */,
+				4F76041121C62E5100A9DCFA /* db */,
 				4F7603FE21C62C8D00A9DCFA /* AppDelegate.swift */,
 				4F76040021C62C8D00A9DCFA /* ViewController.swift */,
 				4F76040221C62C8D00A9DCFA /* Main.storyboard */,
@@ -62,6 +68,22 @@
 				4F76040A21C62C8D00A9DCFA /* Info.plist */,
 			);
 			path = sqliteApplication;
+			sourceTree = "<group>";
+		};
+		4F76041121C62E5100A9DCFA /* db */ = {
+			isa = PBXGroup;
+			children = (
+				4F76041221C62E5B00A9DCFA /* dbInfo.db */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		4F76041321C6300200A9DCFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F76041421C6302000A9DCFA /* dbManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F76041621C6340000A9DCFA /* dbInfo.db in Resources */,
 				4F76040921C62C8D00A9DCFA /* LaunchScreen.storyboard in Resources */,
 				4F76040621C62C8D00A9DCFA /* Assets.xcassets in Resources */,
 				4F76040421C62C8D00A9DCFA /* Main.storyboard in Resources */,
@@ -136,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F76041521C6302000A9DCFA /* dbManager.swift in Sources */,
 				4F76040121C62C8D00A9DCFA /* ViewController.swift in Sources */,
 				4F7603FF21C62C8D00A9DCFA /* AppDelegate.swift in Sources */,
 			);
