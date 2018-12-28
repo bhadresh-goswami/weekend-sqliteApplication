@@ -14,6 +14,10 @@
 		4F76040921C62C8D00A9DCFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F76040721C62C8D00A9DCFA /* LaunchScreen.storyboard */; };
 		4F76041521C6302000A9DCFA /* dbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76041421C6302000A9DCFA /* dbManager.swift */; };
 		4F76041621C6340000A9DCFA /* dbInfo.db in Resources */ = {isa = PBXBuildFile; fileRef = 4F76041221C62E5B00A9DCFA /* dbInfo.db */; };
+		4F76041821C6355D00A9DCFA /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76041721C6355D00A9DCFA /* InfoTableViewController.swift */; };
+		4F76041A21C6364200A9DCFA /* InfoMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76041921C6364200A9DCFA /* InfoMaster.swift */; };
+		4F76041D21C6381800A9DCFA /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F76041C21C6381800A9DCFA /* libsqlite3.0.tbd */; };
+		4F76042221C6405F00A9DCFA /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76042121C6405F00A9DCFA /* AddContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,11 @@
 		4F76040A21C62C8D00A9DCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F76041221C62E5B00A9DCFA /* dbInfo.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = dbInfo.db; sourceTree = "<group>"; };
 		4F76041421C6302000A9DCFA /* dbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbManager.swift; sourceTree = "<group>"; };
+		4F76041721C6355D00A9DCFA /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		4F76041921C6364200A9DCFA /* InfoMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMaster.swift; sourceTree = "<group>"; };
+		4F76041C21C6381800A9DCFA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		4F76041E21C6386000A9DCFA /* sqliteApplication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sqliteApplication-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F76042121C6405F00A9DCFA /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F76041D21C6381800A9DCFA /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +54,7 @@
 			children = (
 				4F7603FD21C62C8D00A9DCFA /* sqliteApplication */,
 				4F7603FC21C62C8D00A9DCFA /* Products */,
+				4F76041B21C6381700A9DCFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +77,9 @@
 				4F76040521C62C8D00A9DCFA /* Assets.xcassets */,
 				4F76040721C62C8D00A9DCFA /* LaunchScreen.storyboard */,
 				4F76040A21C62C8D00A9DCFA /* Info.plist */,
+				4F76041721C6355D00A9DCFA /* InfoTableViewController.swift */,
+				4F76041E21C6386000A9DCFA /* sqliteApplication-Bridging-Header.h */,
+				4F76042121C6405F00A9DCFA /* AddContactViewController.swift */,
 			);
 			path = sqliteApplication;
 			sourceTree = "<group>";
@@ -82,8 +96,17 @@
 			isa = PBXGroup;
 			children = (
 				4F76041421C6302000A9DCFA /* dbManager.swift */,
+				4F76041921C6364200A9DCFA /* InfoMaster.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4F76041B21C6381700A9DCFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F76041C21C6381800A9DCFA /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +141,7 @@
 				TargetAttributes = {
 					4F7603FA21C62C8D00A9DCFA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -161,7 +185,10 @@
 			files = (
 				4F76041521C6302000A9DCFA /* dbManager.swift in Sources */,
 				4F76040121C62C8D00A9DCFA /* ViewController.swift in Sources */,
+				4F76041A21C6364200A9DCFA /* InfoMaster.swift in Sources */,
+				4F76042221C6405F00A9DCFA /* AddContactViewController.swift in Sources */,
 				4F7603FF21C62C8D00A9DCFA /* AppDelegate.swift in Sources */,
+				4F76041821C6355D00A9DCFA /* InfoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,11 +325,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = sqliteApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.sqliteApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sqliteApplication/sqliteApplication-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,11 +342,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = sqliteApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.sqliteApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sqliteApplication/sqliteApplication-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
